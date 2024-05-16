@@ -3,9 +3,8 @@ import pickle
 
 # Load the model
 file_name = 'model.pkl'
-model_file = open(file_name, 'rb')
-loaded_model = pickle.load(model_file)
-model_file.close()
+with open(file_name, 'rb') as f:
+    loaded_model = pickle.load(f)
 
 st.title('Bankruptcy Prevention App')
 
